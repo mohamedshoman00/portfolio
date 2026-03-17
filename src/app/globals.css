@@ -1,26 +1,109 @@
+/* ── Tailwind v4: single import replaces @tailwind base/components/utilities ── */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Google Fonts ── */
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"); */
+
+/* ────────────────────────────────────────────────────────────
+   @theme replaces tailwind.config.ts in v4.
+   These CSS variables become Tailwind utilities automatically:
+   bg-base, text-accent, border-border, from-accent, etc.
+──────────────────────────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-base: #07090f;
+  --color-surface: #0f1117;
+  --color-card: #151923;
+  --color-accent: #22d3ee;
+  --color-accent-dim: #0e7490;
+  --color-border: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+
+  /* Fonts */
+  --font-sans: Inter, sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom keyframes */
+  --animate-gradient-shift: gradientShift 8s ease infinite;
+  --animate-blob-float: blobFloat 6s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ────────────────────────────────────────────────────────────
+   Custom keyframes
+──────────────────────────────────────────────────────────── */
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes blobFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, -20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-15px, 10px) scale(0.97);
+  }
+}
+
+/* ────────────────────────────────────────────────────────────
+   Base resets
+──────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-base);
+    color: var(--color-text-primary);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-base);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent-dim);
+    border-radius: 3px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────
+   Custom utilities — use raw CSS, NOT @apply, for custom tokens.
+   @apply with custom @theme tokens fails in v4 inside @layer.
+──────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      var(--color-accent),
+      #cffafe /* cyan-100 */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+  }
+
+  .section-alt {
+    background-color: var(--color-surface);
+  }
 }
