@@ -8,7 +8,7 @@ const socials = [
   { icon: Github, href: "https://github.com/mohamedshoman00", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/mohamedshoman00", label: "LinkedIn" },
   { icon: Mail, href: "mohamedshoman242@gmail.com", label: "Email" },
-  { icon: MessageCircle, href: "https://wa.me/201223330261", label: "WhatsApp" },
+  // { icon: MessageCircle, href: "https://wa.me/201223330261", label: "WhatsApp" },
 ];
 
 const stats = [
