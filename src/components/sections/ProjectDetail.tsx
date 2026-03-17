@@ -80,7 +80,7 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
       {/* ══════════════════════════════
           HERO — bg-[#0F1117] like even sections
       ══════════════════════════════ */}
-      <section className="py-22 bg-[#0F1117] border-b border-[#1E293B]">
+      <section className="py-16 bg-[#0F1117] border-b border-[#1E293B]">
         <Container>
           <motion.div
             variants={stagger}
