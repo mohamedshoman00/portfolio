@@ -51,12 +51,12 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-6">
           {navLinks.map(({ label, href }) => (
             <li key={label}>
-              <a
+              <Link
                 href={href}
                 className="text-sm text-text-secondary hover:text-accent transition-colors font-medium"
               >
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
@@ -92,13 +92,13 @@ export default function Navbar() {
             <ul className="px-6 py-4 space-y-3">
               {navLinks.map(({ label, href }) => (
                 <li key={label}>
-                  <a
+                  <Link
                     href={href}
                     onClick={() => handleScroll(href.substring(1))}
                     className="block text-text-secondary hover:text-accent transition-colors py-1 text-sm font-medium"
                   >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
