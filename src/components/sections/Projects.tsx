@@ -312,7 +312,7 @@ export default function Projects() {
 
                     {/* Description */}
                     <p className="font-['Inter'] text-[#94A3B8] text-sm leading-[1.8] mb-6">
-                      {project.longDescription}
+                      {project.description}
                     </p>
 
                     {/* Divider */}
