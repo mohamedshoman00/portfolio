@@ -12,7 +12,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Container from "@/components/layout/Container";
 import Image from "next/image";
 
-const AUTO_INTERVAL = 5000; // 5s per slide
+const AUTO_INTERVAL = 6500; // 6s per slide
 const DRAG_THRESHOLD = 50;
 
 const slideVariants = {
