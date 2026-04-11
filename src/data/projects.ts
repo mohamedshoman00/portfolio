@@ -10,7 +10,7 @@ export interface Project {
   liveUrl: string;
   githubUrl: string;
   featured?: boolean;
-  status: "Live" | "In Progress" | "Archived";
+  status: "Live" | "In Progress" | "Archived" | "On Hold";
   year: string;
   role: string;
   thumbnail: string; // [REPLACE with real image path]
@@ -84,8 +84,8 @@ export const projectsData: Project[] = [
       "Optimized frontend performance for live production users",
       "Fully responsive UI",
     ],
-    liveUrl: "https://faster-education.com/", 
-    githubUrl: "https://github.com/mohamedshoman00", 
+    liveUrl: "https://faster-education.com/",
+    githubUrl: "https://github.com/mohamedshoman00",
     featured: true,
     status: "Live",
     year: "2023",
@@ -98,33 +98,33 @@ export const projectsData: Project[] = [
       "/images/faster/faster4.png",
       "/images/faster/faster5.png",
       "/images/faster/faster6.png",
-    ], 
+    ],
   },
-{
-  id: 3,
-  slug: "outly",
-  name: "Outly",
-  tagline: "Discover nearby cafés with smart recommendations",
-  description:
-    "A location-based web app for discovering nearby cafés with ratings and personalized recommendations.",
-  longDescription:
-    "Outly is a location-based web application built to help users discover nearby cafés with ratings and smart recommendations. Developed using React.js and Next.js with modern UI libraries for fully responsive design. Integrated maps and geolocation APIs to deliver personalized suggestions based on the user's location, with a clean UI/UX focusing on usability and smooth navigation.",
-  stack: ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "REST API"],
-  features: [
-    "Location-based café discovery",
-    "Geolocation API integration",
-    "Interactive maps",
-    "Ratings & recommendations",
-    "Responsive design",
-    "Smooth navigation & clean UI/UX",
-  ],
-  liveUrl: "https://outly-project.vercel.app/sign-up",
-  githubUrl: "https://github.com/mohamedshoman00",
-  featured: false,
-  status: "Archived",
-  year: "2022",
-  role: "Frontend Developer",
-   thumbnail: "/images/Outly/out1.png",
+  {
+    id: 3,
+    slug: "outly",
+    name: "Outly",
+    tagline: "Discover nearby cafés with smart recommendations",
+    description:
+      "A location-based web app for discovering nearby cafés with ratings and personalized recommendations.",
+    longDescription:
+      "Outly is a location-based web application built to help users discover nearby cafés with ratings and smart recommendations. Developed using React.js and Next.js with modern UI libraries for fully responsive design. Integrated maps and geolocation APIs to deliver personalized suggestions based on the user's location, with a clean UI/UX focusing on usability and smooth navigation.",
+    stack: ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "REST API"],
+    features: [
+      "Location-based café discovery",
+      "Geolocation API integration",
+      "Interactive maps",
+      "Ratings & recommendations",
+      "Responsive design",
+      "Smooth navigation & clean UI/UX",
+    ],
+    liveUrl: "https://outly-project.vercel.app/sign-up",
+    githubUrl: "https://github.com/mohamedshoman00",
+    featured: false,
+    status: "Archived",
+    year: "2022",
+    role: "Frontend Developer",
+    thumbnail: "/images/Outly/out1.png",
     images: [
       "/images/Outly/out2.png",
       "/images/Outly/out3.png",
@@ -133,8 +133,56 @@ export const projectsData: Project[] = [
       "/images/Outly/out6.png",
       "/images/Outly/out7.png",
     ],
-},
-
+  },
+  {
+    id: 4,
+    slug: "al-sharhan",
+    name: "Al Sharhan",
+    tagline:
+      "Corporate website for a Saudi contracting and infrastructure company",
+    description:
+      "A professional corporate website built for Al Sharhan Contracting Company, showcasing the company profile, services, sectors, and business presence with a responsive and modern user experience.",
+    longDescription:
+      "Al Sharhan is a corporate business website developed for Al Sharhan Contracting Company, a Saudi engineering and contracting firm operating across civil and energy infrastructure. The project focuses on presenting the company’s identity, services, sectors, and operational strengths through a clean, responsive interface that supports business credibility and clear content delivery.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Responsive Design",
+      "Vercel",
+    ],
+    features: [
+      "Responsive corporate website optimized for desktop, tablet, and mobile",
+      "Company profile and brand presentation sections",
+      "Service and sector showcase for infrastructure and contracting activities",
+      "Clean and structured information architecture for business content",
+      "Modern UI with reusable sections and components",
+      "Business-focused layout for credibility and clear communication",
+      "Production deployment on Vercel",
+      "Professional user experience tailored to a corporate audience",
+    ],
+    liveUrl: "https://al-sharhan.vercel.app/",
+    githubUrl: "https://github.com/mohamedshoman00",
+    featured: true,
+    status: "On Hold",
+    year: "2026",
+    role: "Frontend Developer",
+    thumbnail: "/images/al-sharhan/alsharhan1.png",
+    images: [
+      "/images/al-sharhan/alsharhan2.png",
+      "/images/al-sharhan/alsharhan3.png",
+      "/images/al-sharhan/alsharhan4.png",
+      "/images/al-sharhan/alsharhan5.png",
+      "/images/al-sharhan/alsharhan6.png",
+      "/images/al-sharhan/alsharhan7.png",
+      "/images/al-sharhan/alsharhan8.png",
+      "/images/al-sharhan/alsharhan9.png",
+      "/images/al-sharhan/alsharhan10.png",
+      "/images/al-sharhan/alsharhan11.png",
+      "/images/al-sharhan/alsharhan12.png",
+    ],
+  }
   // {
   //   id: 3,
   //   slug: "portfolio-v1",

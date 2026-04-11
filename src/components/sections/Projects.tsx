@@ -57,6 +57,13 @@ const statusStyle: Record<string, { dot: string; text: string; border: string; b
     bg:     "bg-[#07090F]/80",      // ✅ dark bg ثابت
     pill:   "backdrop-blur-md",
   },
+  "On Hold": {
+    dot:    "#94A3B8",
+    text:   "text-[#94A3B8]",
+    border: "border-[#1E293B]",
+    bg:     "bg-[#07090F]/80",      // ✅ dark bg ثابت
+    pill:   "backdrop-blur-md",
+  },
 };
 
 

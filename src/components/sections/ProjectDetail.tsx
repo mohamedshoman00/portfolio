@@ -17,6 +17,7 @@ const statusStyle: Record<string, { dot: string; cls: string }> = {
   Live: { dot: "#4ADE80", cls: "text-green-400 border-green-400/20 bg-green-400/5" },
   "In Progress": { dot: "#FACC15", cls: "text-yellow-400 border-yellow-400/20 bg-yellow-400/5" },
   Archived: { dot: "#94A3B8", cls: "text-[#94A3B8] border-[#1E293B] bg-transparent" },
+  "On Hold": { dot: "#94A3B8", cls: "text-[#94A3B8] border-[#1E293B] bg-transparent" },
 };
 
 /* ─── Shared animation variants — same as all sections ── */
